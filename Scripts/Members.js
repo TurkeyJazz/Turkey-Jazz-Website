@@ -12,12 +12,14 @@ fetch('Data/members.json')
             members.forEach(item => {
                 const itemBox = document.createElement('div');
 
+                // handle snapping to left or right of screen, they should alternate
+                // in the members.json
                 if (item.snap === 'right') itemBox.classList.add('snap-right');
                 else if (item.snap === 'left') itemBox.classList.add('snap-left');
             
                 for (const [key, value] of Object.entries(item)) {
                     if (key === 'snap') continue;
-
+                    
                     if (key.toLowerCase() === 'picture') {
                         const img = document.createElement('img');
                         img.src = value;
