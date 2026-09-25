@@ -3,20 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="nav-button">About</a></li>
-        <li><a href="contact.html" class="nav-button">Contact</a></li>
-        <li><a href="members.html" class="nav-button">Members</a></li>
-    </ul>
-</nav>
 <body>
-    <h1>Turkey Jazz</h1>
-    <p>lowkey dont know what to put here</p>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Turkey Jazz</a></div>
+            <ul class="links">
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="members">Members</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="home">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="members">Members</a></li>
+            <li><a href="contact">Contact</a></li>
+        </div>
+    </header>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropdownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function() {
+            dropdownMenu.classList.toggle('open')
+            const isOpen = dropdownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fas fa-times'
+                : 'fas fa-bars'
+        }
+    </script>
 </body>
 <body>
     <div class="socials">
