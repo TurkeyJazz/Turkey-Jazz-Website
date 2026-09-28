@@ -15,7 +15,7 @@ function displayList(files) {
     files.forEach(file => {
         const li = document.createElement('li');
         const a = document.createElement('a');
-        a.href = file.path;
+        a.href = `score.html?file=${encodeURIComponent(file.path)}&name=${encodeURIComponent(file.name)}`;
         a.textContent = file.name;
         li.appendChild(a);
         list.appendChild(li);

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <html lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title id="page-title">Score</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="JsonReader.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.8.8/build/opensheetmusicdisplay.min.js"></script>
 </head>
-</html>
 <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -17,4 +16,19 @@
         <li><a href="scores.html" class="nav-button">Scores</a></li>
     </ul>
 </nav>
-</html>
+<body>
+    <h1 id="score-title"></h1>
+
+    <div>
+        <a id="download-mxl" href="#" download>Download MusicXML</a> |
+        <a id="download-mscz" href="#" download>Download MuseScore</a>
+    </div>
+
+    <button>Play Score</button>
+
+    <hr>
+
+    <div id="osmd-container"></div>
+
+    <script src="Scripts/Score.js"></script>
+</body>
