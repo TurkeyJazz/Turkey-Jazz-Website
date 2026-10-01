@@ -1,3 +1,7 @@
-# Turkey-Jazz-Website
-the source code for TurkeyJazz.org
-#### please make and verify all changes to a separate branch before merging to main!
+# Home Page
+this is the branch for work on the home/landing page
+
+this branch is the most consistent up to date with the website,
+if testing display formatting or style sheets, do it here
+
+*currently the testing ground for the nav bar rewrite*
