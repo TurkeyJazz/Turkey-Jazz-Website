@@ -18,7 +18,13 @@ if (filePath) {
 }
 
 if (filePath && (filePath.endsWith('.mxl'))) {
-    const osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("osmd-container");
+    const config = {
+        renderSingleHorizontalStaffline: true,
+        drawTitle: false,
+        drawSubtitle: false,
+        drawComposer: false
+    };
+    const osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("osmd-container", config);
     osmd.load(filePath).then(() => {
         osmd.render();
     }).catch(error => { // these errors are mostly for debugging, they should never occur in normal usage
